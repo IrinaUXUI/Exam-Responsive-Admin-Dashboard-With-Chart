@@ -20,7 +20,7 @@
                     </a>
                 </li>
 
-                <li>
+                <li class="hovered">
                     <a href="#">
                         <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
                         <span class="title">Dashboard</span>
@@ -87,9 +87,11 @@
                 <!-- search end -->
 
                 <!-- user  -->
-                <div class="user">
+                <div id="admin">
+                <div class="user"  style="position: relative;">
                     <img src="https://images.generated.photos/IeTmPRT6IFvnptHsaGKFGX-aZh24pgntJa4Ndbjhe0w/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMDky/ODM5LmpwZw.jpg" style="width: 40px;" alt="admin image">
                 </div>
+            </div>
                 <!-- user end -->
             </div>
         </div>
@@ -115,10 +117,11 @@
     
     toggle.onclick = function(){
         navigation.classList.toggle('active');
+        main.classList.toggle('active');
     }
 
 
-    //add hover class in selected list item ( by default second li is selected):
+    //add hover class in selected list item:
     let list = document.querySelectorAll('.navigation li');
 
     function activeLink(){
