@@ -88,7 +88,7 @@
 
                 <!-- user  -->
                 <div class="user">
-                    <img src="https://images.generated.photos/IeTmPRT6IFvnptHsaGKFGX-aZh24pgntJa4Ndbjhe0w/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMDky/ODM5LmpwZw.jpg" alt="admin image">
+                    <img src="https://images.generated.photos/IeTmPRT6IFvnptHsaGKFGX-aZh24pgntJa4Ndbjhe0w/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMDky/ODM5LmpwZw.jpg" style="width: 40px;" alt="admin image">
                 </div>
                 <!-- user end -->
             </div>
@@ -107,7 +107,18 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script>
-    //add hover class in selected list item
+
+    //menu toggle:
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+    
+    toggle.onclick = function(){
+        navigation.classList.toggle('active');
+    }
+
+
+    //add hover class in selected list item ( by default second li is selected):
     let list = document.querySelectorAll('.navigation li');
 
     function activeLink(){
