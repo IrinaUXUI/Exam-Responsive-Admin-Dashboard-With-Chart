@@ -19,30 +19,32 @@
     --yellow: #E7FF00;
 }
 
-body{
+body {
     min-height: 100vh;
     overflow-x: hidden;
     background: var(--bg);
 }
 
-.container{
+.container {
     position: relative;
     width: 100%;
 }
 
-/*                --- NAVIGATION ---                   */
+/*--- NAVIGATION ---*/
 
-.navigation{
+.navigation {
     position: fixed;
     width: 300px;
     height: 100%;
     background: var(--bg-light);
-    border-left: 10px solid var(--bg-light); /*Important for the responsive view*/
-    transition: 0.5s; /*TODO change if needed*/
+    border-left: 10px solid var(--bg-light);
+    /*Important for the responsive view*/
+    transition: 0.5s;
+    /*TODO change if needed*/
     overflow: hidden;
 }
 
-.navigation ul{
+.navigation ul {
     position: absolute;
     top: 0;
     left: 0;
@@ -50,24 +52,27 @@ body{
     /*padding-top: 50px; TODO check the new system */
 }
 
-.navigation ul li{
+.navigation ul li {
     position: relative;
-    width: 100%; /*TODO was 200% before curves */
+    width: 100%;
+    /*TODO was 200% before curves */
     list-style: none;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
 }
 
-.navigation ul li:hover{
+.navigation ul li:hover,
+.navigation ul li.hovered {
     background-color: var(--bg);
 }
 
-.navigation ul li:nth-child(1){
-    margin-bottom: 40px; 
-    pointer-events: none; /* Important- this removes bg on hover if any*/  
+.navigation ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+    /* Important- this removes bg on hover if any*/
 }
 
-.navigation ul li a{
+.navigation ul li a {
     position: relative;
     display: block;
     width: 100%;
@@ -76,24 +81,27 @@ body{
     color: var(--text-primary);
 }
 
-.navigation ul li a:hover{ /*TODO change to le:hover if needed*/
+.navigation ul li:hover a,
+/*TODO change to a:hover if needed*/
+.navigation ul li.hovered a {
     color: var(--orange);
 }
 
-.navigation ul li a .icon{
+.navigation ul li a .icon {
     position: relative;
     display: block;
     min-width: 60px;
     height: 60px;
-    line-height: 70px; /* Important for icon and text alignment*/
+    line-height: 70px;
+    /* Important for icon and text alignment*/
     text-align: center;
 }
 
-.navigation ul li a .icon ion-icon{
+.navigation ul li a .icon ion-icon {
     font-size: 1.75em;
 }
 
-.navigation ul li a .title{
+.navigation ul li a .title {
     font-size: 1.2em;
     position: relative;
     display: block;
@@ -106,28 +114,103 @@ body{
 
 /* outside curves of bg on hover */
 
-.navigation ul li:hover a::before{
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before {
     content: '';
     position: absolute;
     right: 0;
     top: -50px;
     width: 50px;
     height: 50px;
-    background: transparent; /* change to some color to see the form*/
+    background: transparent;
+    /* change to some color to see the form*/
     border-radius: 50%;
-    box-shadow: 35px 35px 0 10px var(--bg); /* change color to see where is the shadow */
+    box-shadow: 35px 35px 0 10px var(--bg);
+    /* change color to see where is the shadow */
     pointer-events: none;
 }
 
-.navigation ul li:hover a::after{
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after {
     content: '';
     position: absolute;
     right: 0;
     bottom: -50px;
     width: 50px;
     height: 50px;
-    background: transparent; /* change to some color to see the form*/
+    background: transparent;
+    /* change to some color to see the form*/
     border-radius: 50%;
-    box-shadow: 35px -35px 0 10px var(--bg); /* change color to see where is the shadow */
+    box-shadow: 35px -35px 0 10px var(--bg);
+    /* change color to see where is the shadow */
     pointer-events: none;
+}
+
+
+/*--- MAIN ---*/
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: transparent;
+    /* TODO change this to --bg-light if needed */
+    transition: 0.5s;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle {
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    color:var(--text-primary); /*TODO change this to --orange if needed */
+    /*background: var(--text-primary);*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    background: var(--bg-light);
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid var(--bg-light);
+    font-size: 1.2em;
+    color: var(--text-primary);
+}
+
+.search label ion-icon{
+    position: absolute;
+    color: var(--orange);
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
 }
