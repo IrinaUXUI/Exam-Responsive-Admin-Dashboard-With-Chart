@@ -44,7 +44,7 @@ body {
     overflow: hidden;
 }
 
-.navigation.active{
+.navigation.active {
     width: 80px;
 }
 
@@ -163,7 +163,7 @@ body {
     transition: 0.5s;
 }
 
-.main.active{
+.main.active {
     width: calc(100% - 80px);
     left: 80px;
 }
@@ -184,7 +184,8 @@ body {
     top: 0;
     width: 60px;
     height: 60px;
-    color:var(--text-primary); /*TODO change this to --orange if needed */
+    color: var(--text-primary);
+    /*TODO change this to --orange if needed */
     /*background: var(--text-primary);*/
     display: flex;
     justify-content: center;
@@ -193,18 +194,18 @@ body {
     cursor: pointer;
 }
 
-.search{
+.search {
     position: relative;
     width: 400px;
     margin: 0 10px;
 }
 
-.search label{
+.search label {
     position: relative;
     width: 100%;
 }
 
-.search label input{
+.search label input {
     width: 100%;
     height: 40px;
     border-radius: 4px;
@@ -217,7 +218,7 @@ body {
     color: var(--text-primary);
 }
 
-.search label ion-icon{
+.search label ion-icon {
     position: absolute;
     color: var(--orange);
     top: 0;
@@ -226,7 +227,8 @@ body {
     cursor: pointer;
 }
 
-.user{ /*TODO solve this bug */
+.user {
+    /*TODO solve this bug */
     position: relative;
     width: 40px;
     height: 40px;
@@ -235,7 +237,7 @@ body {
     cursor: pointer;
 }
 
-.user img{
+.user img {
     position: absolute;
     top: 0;
     left: 0;
@@ -246,17 +248,17 @@ body {
 
 /* cards */
 
-.cardBox{
+.cardBox {
     position: relative;
     width: 100%;
     padding: 20px;
     color: var(--text-primary);
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 30px;
 }
 
-.cardBox .card{
+.cardBox .card {
     position: relative;
     background: var(--bg-light);
     padding: 30px;
@@ -264,60 +266,63 @@ body {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
-   /* box-shadow: 0 7px 25px rgba(0,0,0,0.08);*/ /*TODO check design system*/
+    /* box-shadow: 0 7px 25px rgba(0,0,0,0.08);*/
+    /*TODO check design system*/
 }
 
-.cardBox .card .numbers{
+.cardBox .card .numbers {
     position: relative;
     font-weight: 700;
     font-size: 2.5em;
 }
 
-.cardBox .card .cardName{
+.cardBox .card .cardName {
     color: var(--text-secondary);
     font-size: 1.2em;
     font-weight: 700;
     margin-top: 5px;
 }
 
-.cardBox .card .iconBx{
+.cardBox .card .iconBx {
     color: var(--orange);
-    font-size: 3em; /* was 3.5 */
+    font-size: 3em;
+    /* was 3.5 */
 }
 
 .cardBox .card .iconBx,
 .cardBox .card:hover .numbers,
-.cardBox .card:hover .cardName{
+.cardBox .card:hover .cardName {
     transition: 0.5s;
 }
 
-.cardBox .card:hover .numbers{
- color: var(--text-secondary);
- font-size: 1.2em;
+.cardBox .card:hover .numbers {
+    color: var(--text-secondary);
+    font-size: 1.2em;
 }
 
-.cardBox .card:hover .cardName{ /* TODO deal with shaking */
+.cardBox .card:hover .cardName {
+    /* TODO deal with shaking */
     color: var(--orange);
     font-size: 2.5em;
 }
 
-.cardBox .card:hover .iconBx{
+.cardBox .card:hover .iconBx {
     color: var(--text-primary);
 }
 
 
 /* details */
-.details{
+.details {
     position: relative;
     width: 100%;
     padding: 20px;
     display: grid;
-    grid-template-columns: 2fr 1fr;    
+    grid-template-columns: 2fr 1fr;
     grid-gap: 30px;
-   /* margin-top: 10px;*/
+    /* margin-top: 10px;*/
 }
 
-.details .recentMovies{
+.details .recentMovies {
     position: relative;
     color: var(--text-primary);
     background: var(--bg-light);
@@ -325,47 +330,254 @@ body {
     display: grid;
     min-height: 500px;
     padding: 20px;
-    /*box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);*/ /*TODO check design system*/
+    /*box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);*/
+    /*TODO check design system*/
 }
 
-.cardHeader{
+.cardHeader {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.cardHeader h2{
+.cardHeader h2 {
     font-weight: 700;
     font-size: 1.8em;
 }
 
-.btn{
-position: relative;
-padding: 5px 10px;
-background: var(--orange);
-text-decoration: none;
-color: var(--text-primary);
-font-weight: 700;
-border-radius: 4px;
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: var(--orange);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 700;
+    border-radius: 4px;
 }
 
-.details table{
+.details table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
 }
 
-.details table thead td{
+.details table thead td {
     font-size: 1.4em;
     font-weight: 700;
     color: var(--text-secondary);
 }
 
-.details .recentMovies table tr{
+.details .recentMovies table tr {
     color: var(--text-primary);
-    border-bottom: 2px solid var(--bg) ;
+    border-bottom: 2px solid var(--bg);
 }
 
-.details table thead td{
-    border-bottom: 2px solid var(--orange) ;
+.details .recentMovies table tr:last-child {
+    border-bottom: none;
+}
+
+.details table thead td {
+    border-bottom: 2px solid var(--orange);
+}
+
+.details .recentMovies table tbody tr:hover {
+    background-color: var(--bg);
+    color: var(--orange);
+}
+
+.details .recentMovies table tr td {
+    /* TODO this not working!!! */
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.details .recentMovies table tr td:last-child {
+    text-align: end;
+}
+
+.details .recentMovies table tr td:nth-child(2) {
+    text-align: end;
+}
+
+.details .recentMovies table tr td:nth-child(3) {
+    text-align: center;
+}
+
+/* status */
+
+.status.active {
+    padding: 2px 4px;
+    background: var(--green);
+    color: var(--bg-light);
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.status.pending {
+    padding: 2px 4px;
+    background: var(--red);
+    color: var(--text-primary);
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.status.inprogres {
+    padding: 2px 4px;
+    background: var(--yellow);
+    color: var(--bg-light);
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+/* users */
+.recentUsers {
+    position: relative;
+    color: var(--text-primary);
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 16px;
+}
+
+.recentUsers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* Not needed, but just in case: 
+.recentUsers .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}*/
+
+.recentUsers table tr td {
+    padding: 3px 10px;
+}
+
+.recentUsers table tr td h4 {
+    font-size: 1.2em;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+
+.recentUsers table tr td h4 span {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.recentUsers table tr:hover {
+    background: var(--bg);
+    color: var(--orange);
+}
+
+
+/*           --- RESPONSIVE ---           */
+
+@media (max-width:991px) {
+
+    .navigation {
+        left: -300px;
+    }
+
+    .navigation.active {
+        width: 300px;
+        left: 0;
+    }
+
+    .main {
+        width: 100%;
+        left: 0;
+    }
+
+    .main.active {
+        left: 300px;
+    }
+
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .toggle{
+        color: var(--orange);
+        z-index: 10001;
+    }
+
+    .main.active .toggle{
+        color: var(--text-primary);
+    }
+}
+
+@media (max-width:768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .recentMovies {
+        overflow-x: auto;
+    }
+
+    .status.inprogres {
+        white-space: nowrap;
+        /*This removes break in status label*/
+    }
+    .recentUsers table tr td h4{
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width:488px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cardHeader h2 {
+        font-size: 1.2em;
+    }
+
+    table thead {
+        font-size: 14px;
+    }
+
+    .recentUsers table tr td h4{
+        margin-top: 20px;
+    }
+
+    .user{
+        min-width: 40px;
+    }
+
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+
+    .toggle{
+        color: var(--orange);
+        z-index: 10001;
+    }
+
+    .main.active .toggle{
+      /*  position: fixed;
+        right: 0;                 NOT WORKING
+        left: initial;*/
+        color: var(--text-primary);
+    }
 }
