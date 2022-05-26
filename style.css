@@ -275,7 +275,7 @@ body {
 
 .cardBox .card .cardName{
     color: var(--text-secondary);
-    font-size: 1.1em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-top: 5px;
 }
@@ -285,15 +285,87 @@ body {
     font-size: 3em; /* was 3.5 */
 }
 
-.cardBox .card:hover .numbers{
- color: var(--text-secondary);
+.cardBox .card .iconBx,
+.cardBox .card:hover .numbers,
+.cardBox .card:hover .cardName{
+    transition: 0.5s;
 }
 
-.cardBox .card:hover .cardName{
+.cardBox .card:hover .numbers{
+ color: var(--text-secondary);
+ font-size: 1.2em;
+}
+
+.cardBox .card:hover .cardName{ /* TODO deal with shaking */
     color: var(--orange);
+    font-size: 2.5em;
 }
 
 .cardBox .card:hover .iconBx{
     color: var(--text-primary);
 }
 
+
+/* details */
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;    
+    grid-gap: 30px;
+   /* margin-top: 10px;*/
+}
+
+.details .recentMovies{
+    position: relative;
+    color: var(--text-primary);
+    background: var(--bg-light);
+    border-radius: 16px;
+    display: grid;
+    min-height: 500px;
+    padding: 20px;
+    /*box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);*/ /*TODO check design system*/
+}
+
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2{
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.btn{
+position: relative;
+padding: 5px 10px;
+background: var(--orange);
+text-decoration: none;
+color: var(--text-primary);
+font-weight: 700;
+border-radius: 4px;
+}
+
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td{
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.details .recentMovies table tr{
+    color: var(--text-primary);
+    border-bottom: 2px solid var(--bg) ;
+}
+
+.details table thead td{
+    border-bottom: 2px solid var(--orange) ;
+}

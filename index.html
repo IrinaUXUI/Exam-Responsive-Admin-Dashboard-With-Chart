@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>Responsive Admin Dashboard with Chart</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
 
@@ -16,55 +18,70 @@
                 <li>
                     <a href="#">
                         <span class="icon"><img src="logo.png" style="width: 60px;" alt=""></span>
-                        <span class="title" style="color: var(--orange); font-weight:700; font-size: 1.75em;">Movie Friends</span>
+                        <span class="title" style="color: var(--orange); font-weight:700; font-size: 1.75em;">Movie
+                            Friends</span>
                     </a>
                 </li>
 
                 <li class="hovered">
                     <a href="#">
-                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="people-outline"></ion-icon>
+                        </span>
                         <span class="title">Users</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="chatbubbles-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="chatbubbles-outline"></ion-icon>
+                        </span>
                         <span class="title">Messages</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="headset-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="headset-outline"></ion-icon>
+                        </span>
                         <span class="title">Help</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
                         <span class="title">Settings</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="lock-open-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="lock-open-outline"></ion-icon>
+                        </span>
                         <span class="title">Password</span>
                     </a>
                 </li>
 
                 <li>
                     <a href="#">
-                        <span class="icon"><ion-icon name="exit-outline"></ion-icon></span>
+                        <span class="icon">
+                            <ion-icon name="exit-outline"></ion-icon>
+                        </span>
                         <span class="title">Sign out</span>
                     </a>
                 </li>
@@ -76,9 +93,11 @@
         <!-- Main Start -->
         <div class="main">
 
-             <!-- topbar Start -->
+            <!-- topbar Start -->
             <div class="topbar">
-                <div class="toggle"> <ion-icon name="menu-outline"></ion-icon></div>
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
                 <!-- search-->
                 <div class="search">
                     <label>
@@ -90,16 +109,17 @@
 
                 <!-- user  -->
                 <div id="admin">
-                <div class="user"  style="position: relative;">
-                    <img src="https://images.generated.photos/IeTmPRT6IFvnptHsaGKFGX-aZh24pgntJa4Ndbjhe0w/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMDky/ODM5LmpwZw.jpg" style="width: 40px;" alt="admin image">
+                    <div class="user" style="position: relative;">
+                        <img src="https://images.generated.photos/IeTmPRT6IFvnptHsaGKFGX-aZh24pgntJa4Ndbjhe0w/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy8wMDky/ODM5LmpwZw.jpg"
+                            style="width: 40px;" alt="admin image">
+                    </div>
                 </div>
-            </div>
                 <!-- user end -->
             </div>
-             <!-- topbar End -->
+            <!-- topbar End -->
 
 
-              <!-- card Start -->
+            <!-- card Start -->
             <div class="cardBox">
 
                 <div class="card">
@@ -118,7 +138,8 @@
                         <div class="cardName">Users</div>
                     </div>
                     <div class="iconBx">
-                        <ion-icon name="people-outline"></ion-icon> </div>
+                        <ion-icon name="people-outline"></ion-icon>
+                    </div>
                 </div>
 
                 <div class="card">
@@ -133,7 +154,7 @@
 
                 <div class="card">
                     <div>
-                        <div class="numbers"> 758 378</div>
+                        <div class="numbers"> 458 378</div>
                         <div class="cardName">Comments</div>
                     </div>
                     <div class="iconBx">
@@ -142,7 +163,80 @@
                 </div>
 
             </div>
-               <!-- card End -->
+            <!-- card End -->
+
+
+            <!-- Details list  Start -->
+            <div class="details">
+
+                <div class="recentMovies">
+
+                    <div class="cardHeader">
+                        <h2>Resent Movies</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Genre</td>
+                                <td>Year</td>
+                                <td>Status</td>                               
+                            </tr>
+                        </thead>
+                        
+
+                        <tbody>                           
+                            <tr>
+                                <td>The Northman</td>
+                                <td>Adventure/Action</td>
+                                <td>2022</td>
+                                <td class="status active">Active</td>
+                            </tr>
+
+                            <tr>
+                                <td>The Batman</td>
+                                <td>Action/Adventure,</td>
+                                <td>2022</td>
+                                <td class="status inprogres">In Progress</td>
+                            </tr>
+
+                            <tr>
+                                <td>Hatching</td>
+                                <td>Horror</td>
+                                <td>2022</td>
+                                <td class="status pending">Pending</td>
+                            </tr>
+
+                            <tr>
+                                <td>Borrego</td>
+                                <td>Mystery & thriller</td>
+                                <td>2022</td>
+                                <td class="status active">Active</td>
+                            </tr>
+
+                            <tr>
+                                <td>Dual</td>
+                                <td>Sci-fi/Comedy</td>
+                                <td>Pending</td>
+                                <td class="status pending">Pending</td>
+                            </tr>
+
+                            <tr>
+                                <td>365 Days</td>
+                                <td>Drama/Romance</td>
+                                <td>2020</td>
+                                <td class="status inprogres">In Progress</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+            <!-- Details list  Start -->
+
 
         </div>
         <!-- Main End -->
@@ -152,38 +246,38 @@
 
 
 
-        <!-- End of component-->
+
     </div>
-
+    <!-- End of component-->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-<script>
+    <script>
+        //menu toggle:
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
 
-    //menu toggle:
-    let toggle = document.querySelector('.toggle');
-    let navigation = document.querySelector('.navigation');
-    let main = document.querySelector('.main');
-    
-    toggle.onclick = function(){
-        navigation.classList.toggle('active');
-        main.classList.toggle('active');
-    }
+        toggle.onclick = function () {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
 
 
-    //add hover class in selected list item:
-    let list = document.querySelectorAll('.navigation li');
+        //add hover class in selected list item:
+        let list = document.querySelectorAll('.navigation li');
 
-    function activeLink(){
-        list.forEach((item)=>
-        item.classList.remove('hovered'));
-        this.classList.add('hovered');
-    }
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
 
-    list.forEach((item)=>{
-        item.addEventListener('mouseover',activeLink);
-    })
-</script>
+        list.forEach((item) => {
+            item.addEventListener('mouseover', activeLink);
+        })
+    </script>
 
 </body>
+
 </html>
