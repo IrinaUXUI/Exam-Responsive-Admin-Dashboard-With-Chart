@@ -4,7 +4,7 @@ const opinions = document.getElementById('myChartOpinions').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Traffic from Facebook', 'Traffic from Google    ', 'Traffic from Twitter     '],
+        labels: ['Traffic from Facebook','Traffic from Google    ','Traffic from Twitter     '],
         datasets: [{
             data: [12014, 65215, 124212],
             backgroundColor: [
