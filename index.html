@@ -313,7 +313,10 @@
             navigation.classList.toggle('active');
             main.classList.toggle('active');
         }
-
+      
+         if(toggle.onclick()){    /* Important, in other cas don not resize properly*/
+            location.reload();
+        }
 
         //add hover class in selected list item:
         let list = document.querySelectorAll('.navigation li');
